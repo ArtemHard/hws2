@@ -1,0 +1,33 @@
+.message {
+display: flex;
+    flex-direction: column;
+
+}
+
+.imageAndText {
+
+}
+
+.imageAndText img {
+
+}
+
+.text {
+
+}
+
+.text:after {
+
+}
+
+.name {
+
+}
+
+.messageText {
+
+}
+
+.time {
+
+}
