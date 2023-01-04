@@ -1,21 +1,34 @@
 .friendMessage {
-
+background-color: bisque;
+display: flex;
+flex-direction: column;
+margin: 30px 70px
 }
 
 .friendImageAndText {
+background-color: aquamarine;
+display: flex;
 
 }
 
 .friendImageAndText img {
-
+background-color: red;
+width: 48px;
+height: 48px;
+border-radius: 50%;
 }
 
 .friendText {
-
+background-color: #F5F7FB;
+;
 }
 
 .friendText:after {
-
+    content: '';
+    width: 0; 
+    height: 0;
+    border-bottom: 10px solid red;
+    border-left: 10px solid transparent;
 }
 
 .friendName {
@@ -27,5 +40,5 @@
 }
 
 .friendTime {
-
+    margin-left: 5px;
 }
