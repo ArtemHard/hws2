@@ -39,6 +39,7 @@ const FriendMessage = (props: FiendMessageType) => {
                     </pre>
                 </div>
             </div>
+            <div className={s.after}></div>
             <div
                 id={'hw1-friend-time-' + props.message.id}
                 className={s.friendTime}

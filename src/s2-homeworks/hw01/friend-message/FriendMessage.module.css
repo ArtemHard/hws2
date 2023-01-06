@@ -1,34 +1,39 @@
 .friendMessage {
-background-color: bisque;
+/* background-color: rgb(255, 196, 206); */
 display: flex;
 flex-direction: column;
-margin: 30px 70px
+margin: 30px 70px;
 }
 
 .friendImageAndText {
-background-color: aquamarine;
+/* background-color: rgb(63, 1, 233); */
 display: flex;
-
+flex-wrap: nowrap;
 }
 
 .friendImageAndText img {
-background-color: red;
+/* background-color: red; */
 width: 48px;
 height: 48px;
 border-radius: 50%;
+margin-right: 15px;
 }
 
 .friendText {
 background-color: #F5F7FB;
-;
+border-radius: 10px 10px 10px 0;
 }
 
-.friendText:after {
-    content: '';
-    width: 0; 
-    height: 0;
-    border-bottom: 10px solid red;
-    border-left: 10px solid transparent;
+.after {
+    /* content: ''; */
+    color: red;
+        width: 15px;
+        height: 15px;
+    margin-left: 48px;
+    margin-top: -15px;
+    
+    background: radial-gradient(28px at top left, transparent 50%, #F5F7FB 51%);
+    
 }
 
 .friendName {
