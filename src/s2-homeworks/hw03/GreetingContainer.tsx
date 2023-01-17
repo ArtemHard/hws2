@@ -1,10 +1,4 @@
-import React, {
-  ChangeEvent,
-  ChangeEventHandler,
-  InputHTMLAttributes,
-  KeyboardEvent,
-  useState,
-} from "react";
+import React, { KeyboardEvent, useState } from "react";
 import Greeting from "./Greeting";
 import { UserType } from "./HW3";
 
@@ -38,9 +32,12 @@ export const pureOnBlur = (name: any, setError: (value: string) => void) => {
 
 export const pureOnEnter = (
   e: KeyboardEvent<HTMLInputElement>,
-  addUser: any
+  addUser: () => void
 ) => {
   // если нажата кнопка Enter - добавить
+  if (e.key === "Enter") {
+    addUser();
+  }
 };
 
 // более простой и понятный для новичков
@@ -69,12 +66,12 @@ const GreetingContainer: React.FC<GreetingContainerPropsType> = ({
     pureOnBlur(name, setError);
   };
 
-  const onEnter = (e: any) => {
+  const onEnter = (e: KeyboardEvent<HTMLInputElement>) => {
     pureOnEnter(e, addUser);
   };
 
   const totalUsers = users.length; // need to fix
-  const lastUserName = "some name"; // need to fix
+  const lastUserName = users[users.length - 1].name; // need to fix
 
   return (
     <Greeting
