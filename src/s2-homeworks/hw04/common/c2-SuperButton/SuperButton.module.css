@@ -1,35 +1,103 @@
 .button {
+  width: 132px;
+  height: 30px;
+  background: #0066cc;
+  border-radius: 3px;
+
+  font-family: "Montserrat", sans-serif;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 20px;
+  /* identical to box height, or 143% */
+
+  border: none;
+  /* Light /140 */
+
+  color: #ffffff;
 }
 
 .disabled {
+  background: #004d99;
+  opacity: 0.5;
+  border-radius: 3px;
+  width: 133px;
+  height: 30px;
+  font-family: "Montserrat", sans-serif;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 20px;
+  /* identical to box height, or 143% */
+
+  color: #002e5c;
 }
 
 .secondary {
+  width: 133px;
+  height: 30px;
+
+  font-family: "Montserrat", sans-serif;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 20px;
+  /* identical to box height, or 143% */
+  background-color: white;
+  color: #0066cc;
+  border: 1px solid #0066cc;
+  width: 167px;
+  height: 30px;
 }
 
 .default {
 }
 
 .red {
+  width: 129px;
+  height: 30px;
+  /* Danger/100 */
+
+  background: #cc1439;
+  border-radius: 3px;
+  font-family: "Montserrat", sans-serif;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 20px;
+  /* identical to box height, or 143% */
+
+  /* Light /140 */
+
+  color: #ffffff;
 }
 
 .default:hover {
+  width: 167px;
+  height: 30px;
+  background: #0080ff;
 }
 
 .red:hover {
+  width: 167px;
+  height: 30px;
+  background: #ff1a47;
 }
 
 .secondary:hover {
+  background-color: #e5f0fa;
 }
 
-
 .default:active {
+    background: #0059B3;
 }
 
 .secondary:active {
+    background: #C9E5FF;
 }
 
 .red:active {
+    background: #B31232;
 }
 
 .button:disabled {
