@@ -32,7 +32,7 @@ margin-bottom: 48px;
 }
 
 .error {
-  position: relative;
+  /* position: relative; */
   top: -30px;
   right: 440px;
   font-family: "Montserrat", sans-serif;
