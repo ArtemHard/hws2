@@ -8,7 +8,6 @@ type PropsType = {
   open: boolean;
   handleClose: () => void;
 };
-console.log(s);
 
 export const Sidebar: FC<PropsType> = ({ open, handleClose }) => {
   const sidebarClass = s.sidebar + (open ? " " + s.open : "");
