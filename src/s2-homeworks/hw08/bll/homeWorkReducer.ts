@@ -13,12 +13,12 @@ export const homeWorkReducer = (
     case "sort": {
       // by name
 
-      return [...sortName(state, action.payload)]; // need to fix
+      return sortName(state, action.payload); // need to fix
     }
     case "check": {
       //   debugger;
       const newState = state.filter((person) => person.age > action.payload);
-      return newState; // need to fix
+      return [...newState]; // need to fix
     }
     default:
       return state;
@@ -26,17 +26,19 @@ export const homeWorkReducer = (
 };
 
 const sortName = (state: UserType[], payload: "up" | "down"): UserType[] => {
+  const newState = [...state];
+
   if (payload === "up") {
-    const sortedState = state.sort((a, b) => {
+    newState.sort((a, b) => {
       if (a.name > b.name) return 1;
       else return -1;
     });
-    return sortedState;
+    return newState;
   } else {
-    const sortedState = state.sort((a, b) => {
+    newState.sort((a, b) => {
       if (a.name > b.name) return -1;
       else return 1;
     });
-    return sortedState;
+    return newState;
   }
 };
