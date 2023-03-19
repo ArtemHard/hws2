@@ -10,20 +10,16 @@ function Clock() {
     new Date(restoreState("hw9-date", Date.now()))
   );
   const [show, setShow] = useState<boolean>(false);
-  console.log(
-    date.toLocaleDateString("en-En", {
-      weekday: "long",
-    })
-  );
+
   //   console.log(timerId);
 
   const start = () => {
     // пишут студенты // запустить часы (должно отображаться реальное время, а не +1)
     // сохранить ид таймера (https://learn.javascript.ru/settimeout-setinterval#setinterval)
     let timerId = setInterval(() => {
-      setDate(new Date(Date.now()));
+      // setDate(new Date(Date.now()));
+      setDate(new Date());
     }, 1000);
-    console.log(date);
 
     setTimerId(+timerId);
   };
@@ -42,10 +38,23 @@ function Clock() {
     setShow(false);
   };
 
-  //   { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' }
+  const stringTime = date.toLocaleTimeString().slice(0, 8) || "date->time" || (
+    <br />
+  ); // часы24:минуты:секунды (01:02:03)/(23:02:03)/(24:00:00)/(00:00:01) // пишут студенты
+  const stringDateGenerator = (dataFromDate: Date) => {
+    return `${
+      date.getDate() > 9
+        ? date.getDate().toString()
+        : "0" + date.getDate().toString()
+    }.${
+      date.getMonth() + 1 > 9
+        ? (date.getMonth() + 1).toString()
+        : "0" + (date.getMonth() + 1).toString()
+    }.${date.getFullYear().toString()}`;
+  };
+  const stringDate = stringDateGenerator(date);
 
-  const stringTime = date.toLocaleTimeString() || "date->time" || <br />; // часы24:минуты:секунды (01:02:03)/(23:02:03)/(24:00:00)/(00:00:01) // пишут студенты
-  const stringDate = date.toLocaleDateString() || "date->date" || <br />; // день.месяц.год (01.02.2022) // пишут студенты, варианты 01.02.0123/01.02.-123/01.02.12345 не рассматриваем
+  // date.toLocaleDateString() || "date->date" || <br />; // день.месяц.год (01.02.2022) // пишут студенты, варианты 01.02.0123/01.02.-123/01.02.12345 не рассматриваем
 
   // день недели на английском, месяц на английском (https://learn.javascript.ru/intl#intl-datetimeformat)
   const stringDay = date.toLocaleDateString("en-En", {
