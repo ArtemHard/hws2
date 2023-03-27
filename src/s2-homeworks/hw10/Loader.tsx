@@ -1,3 +1,12 @@
-import s from './Loader.module.css'
+import s from "./Loader.module.css";
 
-export const Loader = () => <div className={s.loader}/>
+export const Loader = () => <ElementLoader />;
+
+const ElementLoader = () => (
+  <div className={s["lds-ring"]}>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+  </div>
+);
