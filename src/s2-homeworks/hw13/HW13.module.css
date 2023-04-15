@@ -6,8 +6,11 @@
 }
 
 .responseContainer {
+    width: 1048px;
+    margin-left: 162px;
+    margin-right: 70px;
   display: flex;
-  justify-content: end;
+  justify-content: center;
   gap: 100px;
 }
 

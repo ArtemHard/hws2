@@ -15,9 +15,6 @@ import { useAppDispatch, useAppSelector } from "../../hooks/reduxHooks";
 const HW10 = () => {
   const dispatch = useAppDispatch();
   const isLoading = useAppSelector((state) => state.loading.isLoading);
-  // useSelector, useDispatch // пишет студент
-  //   const isLoading = false;
-  console.log(isLoading);
 
   const setLoading = () => {
     // пишет студент // показать крутилку на 1,5 секунд

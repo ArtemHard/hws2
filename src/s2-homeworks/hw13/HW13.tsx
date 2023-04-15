@@ -52,6 +52,8 @@ const HW13 = () => {
         } else return res;
       })
       .catch((e) => {
+        console.log(e.response.status);
+
         if (e.response.status === 500) {
           setCode("Ошибка 500!");
           setImage(error500);
@@ -63,7 +65,8 @@ const HW13 = () => {
           setImage(error400);
           setInfo(e.response.data.info);
           setText(e.response.data.errorText);
-        } else {
+        }
+        if (!e.response.data) {
           setImage(errorUnknown);
           setCode("Error!");
           setText(e.message);
